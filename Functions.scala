@@ -12,5 +12,11 @@ object Functions{
     // }
     //
     // println(getSum(4,5))
+
+    def sayHi() : Unit = {
+      println("Hi, how are you?")
+    }
+
+    sayHi
   }
 }

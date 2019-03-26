@@ -22,5 +22,13 @@ object Looping {
       println("List item " + i)
     }
 
+    // creating an evenlist
+    var evenList = for { i <- 1 to 20
+                      if (i % 2) == 0
+                    } yield i
+    for(i <- evenList){
+      println(i)
+    }
+
    }
 }

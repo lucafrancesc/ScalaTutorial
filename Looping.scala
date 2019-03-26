@@ -17,8 +17,9 @@ object Looping {
     }
 
     // for loop
-    for(i <-1 to 10){
-      println(i)
+    val aList = List(1,2,3,4,5)
+    for(i <- aList){
+      println("List item " + i)
     }
 
    }

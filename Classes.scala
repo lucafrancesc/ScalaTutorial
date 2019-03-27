@@ -5,27 +5,32 @@ object Classes{
     val rover = new Animal
     rover.setName("Rover")
     rover.setSound("Woof")
-    printf("%s says %s\n", rover.getName, rover.getSound)
-    rover.setMovement("wiggles his tail")
-    printf("%s %s\n", rover.getName, rover.getMovement)
+    // printf("%s says %s\n", rover.getName, rover.getSound)
+    // printf("%s %s\n", rover.getName, rover.getMovement)
+    println(rover.toString)
 
-    val whiskers = new Animal("Whiskers", "Meow", "Run")
-    println(s"${whiskers.getName} with id ${whiskers.id} says ${whiskers.getSound}")
+    val whiskers = new Animal("Whiskers", "Meow")
+    // val whiskers = new Animal("Whiskers", "Meow", "Run")
+    // println(s"${whiskers.getName} with id ${whiskers.id} says ${whiskers.getSound}")
     println(whiskers.toString)
+
+    val spike = new Dog("Spike", "Woof", "Grrr")
+    spike.setName("Spike")
+    println(spike.toString)
 
   } // END OF MAIN
 
 //  CREATING MY FIRST CLASS
 // defining the default constructor
-  class Animal(var name: String, var sound : String, var movement : String){
-
+  // class Animal(var name: String, var sound : String, var movement : String){
+  class Animal(var name: String, var sound : String){
     this.setName(name)
 
     val id = Animal.newIdNumber
 
     def getName() : String = name
     def getSound() : String = sound
-    def getMovement() : String = movement
+    // def getMovement() : String = movement
 
     def setName(name : String){
       if(!(name.matches(".*\\d+.*")))
@@ -38,17 +43,19 @@ object Classes{
       this.sound = sound
     }
 
-    def setMovement(movement : String){
-      this.movement = movement
-    }
+    // def setMovement(movement : String){
+    //   this.movement = movement
+    // }
 
     def this(name : String){
-      this("No name", "No sound", "No movement")
+      this("No name", "No sound")
+      // this("No name", "No sound", "No movement")
       this.setName(name)
     }
 
     def this(){
-      this("No name", "No sound", "No movement")
+      this("No name", "No sound")
+      // this("No name", "No sound", "No movement")
     }
 
     override def toString() : String = {
@@ -61,5 +68,30 @@ object Classes{
     private var idNumber = 0
     private def newIdNumber = { idNumber += 1; idNumber }
   }
+
+// INHERITANCE
+  class Dog(name : String, sound : String, growl : String) extends Animal(name, sound){
+
+    def this(name : String, sound : String){
+      this("No name", sound, "No growl")
+      this.setName(name)
+    }
+
+    def this(name : String){
+      this("No name", "No sound", "No growl")
+      this.setName(name)
+    }
+
+    def this(){
+      this("No name", "No sound", "No growl")
+      this.setName(name)
+    }
+
+    override def toString() : String = {
+      return "%s with the id %d says %s or %s".format(this.name, this.id, this.sound, this.growl)
+    }
+  } //END OF INHERITANCE CLASS
+
+
 
 } // END OF OBJ CLASSES

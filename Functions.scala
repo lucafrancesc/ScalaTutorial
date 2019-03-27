@@ -52,8 +52,21 @@ object Functions{
 //    numbersTimes2.foreach(println)
 
     var numbersDivisibleBy4 = for(num <- numbersTimes2 if num % 4 == 0) yield num
-    numbersDivisibleBy4.foreach(println)
+//    numbersDivisibleBy4.foreach(println)
 
+    var multiDim = Array.ofDim[Int](11, 11)
+
+    for(i <- 0 to 10){
+      for(j <- 0 to 10){
+        multiDim(i)(j) = i * j
+      }
+    }
+
+    for(i <- 0 to 10){
+      for(j <- 0 to 10){
+        printf("%d * %d = %d\n", i, j, multiDim(i)(j))
+      }
+    }
 
   }
 }

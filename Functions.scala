@@ -62,11 +62,20 @@ object Functions{
       }
     }
 
-    for(i <- 0 to 10){
-      for(j <- 0 to 10){
-        printf("%d * %d = %d\n", i, j, multiDim(i)(j))
-      }
-    }
+//    for(i <- 0 to 10){
+//      for(j <- 0 to 10){
+//        printf("%d * %d = %d\n", i, j, multiDim(i)(j))
+//      }
+//    }
+
+//    println("Sum = " + numbersDivisibleBy4.sum)
+//    println("Min = " + numbersDivisibleBy4.min)
+//    println("Max = " + numbersDivisibleBy4.max)
+
+    val sortedAsc = numbersDivisibleBy4.sortWith(_>_)
+    val sortedDesc = numbersDivisibleBy4.sortWith(_<_)
+    sortedAsc.foreach(println)
+    sortedDesc.foreach(println)
 
   }
 }

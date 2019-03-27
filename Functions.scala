@@ -42,14 +42,18 @@ object Functions{
 
     for(num <- 1 until numbers.length){
       numbers(num) = num
-      println(numbers(num))
+//      println(numbers(num))
     }
 
     var numbersTimes2 = for(i <- numbers) yield i * 2
 //    for(num2 <- 0 until numbersTimes2.length){
 //      println(numbersTimes2(num2))
 //    }
-    numbersTimes2.foreach(println)
+//    numbersTimes2.foreach(println)
+
+    var numbersDivisibleBy4 = for(num <- numbersTimes2 if num % 4 == 0) yield num
+    numbersDivisibleBy4.foreach(println)
+
 
   }
 }

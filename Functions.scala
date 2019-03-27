@@ -13,10 +13,30 @@ object Functions{
     //
     // println(getSum(4,5))
 
-    def sayHi() : Unit = {
-      println("Hi, how are you?")
+    // def sayHi() : Unit = {
+    //   println("Hi, how are you?")
+    // }
+    //
+    // sayHi
+
+    // def getSum(args : Int*) : Int = {
+    //   var sum : Int = 0
+    //   for(num <- args){
+    //     sum += num
+    //   }
+    //   sum
+    // }
+    //
+    // println(getSum(1,2,3,4))
+
+    def factorial(num : BigInt) : BigInt = {
+      if(num <= 1)
+        1
+      else
+        num * factorial(num-1)
     }
 
-    sayHi
+    println(factorial(12))
+
   }
 }

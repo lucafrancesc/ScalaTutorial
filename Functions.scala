@@ -74,8 +74,10 @@ object Functions{
 
     val sortedAsc = numbersDivisibleBy4.sortWith(_>_)
     val sortedDesc = numbersDivisibleBy4.sortWith(_<_)
-    sortedAsc.foreach(println)
-    sortedDesc.foreach(println)
+    println(sortedAsc.deep.mkString(", "))
+    println(sortedDesc.deep.mkString(", "))
+//    sortedAsc.foreach(println)
+//    sortedDesc.foreach(println)
 
   }
 }

@@ -29,14 +29,27 @@ object Functions{
     //
     // println(getSum(1,2,3,4))
 
-    def factorial(num : BigInt) : BigInt = {
-      if(num <= 1)
-        1
-      else
-        num * factorial(num-1)
+//    def factorial(num : BigInt) : BigInt = {
+//      if(num <= 1)
+//        1
+//      else
+//        num * factorial(num-1)
+//    }
+//
+//    println(factorial(12))
+
+    var numbers = new Array[Int](20)
+
+    for(num <- 1 until numbers.length){
+      numbers(num) = num
+      println(numbers(num))
     }
 
-    println(factorial(12))
+    var numbersTimes2 = for(i <- numbers) yield i * 2
+//    for(num2 <- 0 until numbersTimes2.length){
+//      println(numbersTimes2(num2))
+//    }
+    numbersTimes2.foreach(println)
 
   }
 }

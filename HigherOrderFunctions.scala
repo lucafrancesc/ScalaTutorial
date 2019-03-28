@@ -20,6 +20,12 @@ object HigherOrderFunctions{
     printf("3 * 100 = %.1f\n", multIt(time3, 100))
     printf("4 * 100 = %.1f\n", multIt(time4, 100))
 
+    val divisorVal = 5
+
+    val divisor = (num : Double) => num / divisorVal
+
+    println("5 / 5 = " + divisor(5.0))
+
     // println(log10Func(1000))
     //
     // List(100.00, 1000.00, 10000.00).map(log10Func).foreach(println)

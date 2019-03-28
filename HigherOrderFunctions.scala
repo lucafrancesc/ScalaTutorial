@@ -13,10 +13,13 @@ object HigherOrderFunctions{
     // println(log10Func(1000))
 
     List(100.00, 1000.00, 10000.00).map(log10Func).foreach(println)
+    println
 
-    List(1, 2, 3, 4, 5).map((x : Int ) => x * 50).foreach(println)
+    List(1, 2, 3, 4, 5).map(_ * 50).foreach(println)
+    println
 
     List(1, 2, 3, 4, 5).filter((x : Int ) => x % 2 == 0).foreach(println)
+    println
 
     List(1, 2, 3, 4, 5).filter(_ % 2 != 0).foreach(println)
 

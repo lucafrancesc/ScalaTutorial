@@ -15,6 +15,10 @@ object HigherOrderFunctions{
     List(100.00, 1000.00, 10000.00).map(log10Func).foreach(println)
 
     List(1, 2, 3, 4, 5).map((x : Int ) => x * 50).foreach(println)
+
+    List(1, 2, 3, 4, 5).filter((x : Int ) => x % 2 == 0).foreach(println)
+
+
   } //END OF MAIN
 
 } // END OF OBJ CLASSES

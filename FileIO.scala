@@ -20,7 +20,6 @@ object FileIO{
 
     textFromFile.close()
 
-
   } //END OF MAIN
 
 } // END OF OBJ CLASSES

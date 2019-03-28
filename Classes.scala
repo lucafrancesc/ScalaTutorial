@@ -37,9 +37,6 @@ object Classes{
     def move = "The wolf %s moves at %.2f mhp".format(this.name, this.moveSpeed)
     }
 
-
-
-
 //  CREATING MY FIRST CLASS
 // defining the default constructor
   // class Animal(var name: String, var sound : String, var movement : String){

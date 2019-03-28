@@ -18,6 +18,7 @@ object HigherOrderFunctions{
 
     List(1, 2, 3, 4, 5).filter((x : Int ) => x % 2 == 0).foreach(println)
 
+    List(1, 2, 3, 4, 5).filter(_ % 2 != 0).foreach(println)
 
   } //END OF MAIN
 

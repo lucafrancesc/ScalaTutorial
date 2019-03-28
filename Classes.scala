@@ -18,7 +18,27 @@ object Classes{
     spike.setName("Spike")
     println(spike.toString)
 
+    val fang = new Wolf("Fang")
+    fang.moveSpeed = 36.0
+    println(fang.move)
+
   } // END OF MAIN
+
+  //  CREATING MY FIRST ABSTRACT CLASS
+  abstract class Mammal(val name: String){
+    var moveSpeed : Double
+
+    def move : String
+  }
+
+  class Wolf(name: String) extends Mammal(name){
+    var moveSpeed = 35.0
+
+    def move = "The wolf %s moves at %.2f mhp".format(this.name, this.moveSpeed)
+    }
+
+
+
 
 //  CREATING MY FIRST CLASS
 // defining the default constructor
